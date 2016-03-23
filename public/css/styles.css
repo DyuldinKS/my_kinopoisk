@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial;
+}
+
+body {
+  box-sizing: content-box;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 920px;
+  text-align: center;
+}
+
+
+
+/* Добавление категории */
+#addCategory {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+}
+
+#addCategory > button {
+
+  background-image: url('/images/actions/add.png');
+}
+
+#addCategory > input,
+#addCategory > button,
+#categoryList > li > button {
+  height: 40px;
+  display: block;
+  line-height: 36px;
+  color: #707070;
+  border: 2px solid #D0D0D0;
+  background-color: white;
+}
+
+#addCategory > input:first-child {
+  width: 100%;
+  padding-left: 15px;
+  font-size: 18px;
+  color: #707070;
+  border: 2px solid #D0D0D0;
+}
+
+#addCategory > button,
+#categoryList > li > button {
+  position: absolute;
+  width: 15%;
+  min-width: 40px;
+  max-width: 60px;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+ul {
+  list-style-type: none;
+}
+
+body > ul {
+  position: relative;
+  width: 100%;
+}
+
+#categoryList > li {
+  position: relative;
+  margin-top: 4px;
+}
+
+#categoryList > li:first-child {
+  margin-top: 20px;
+}
+
+#categoryList > li > button {
+  border: 2px solid #C0C0C0;
+  /*background-size: 75%;*/
+  background-image: url('/images/actions/delete.png');
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+.shown > li {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 160px;
+  padding: 10px 0 10px 10px;
+  text-align: left;
+}
+
+h2 {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: block;
+  line-height: 36px;
+  font-size: 16px;
+  color: #FF5600;
+  border: 2px solid #C0C0C0;
+  border-radius: 2px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+#categoryList div.info > p {
+  font-size: 14px;
+  color: #777;
+}
+
+.shown > li > img {
+  margin-right: 20px;
+  float: left;
+  width: 100px;
+  height: 100%;
+}
+
+.info { 
+  float: left;
+}
+
+.info > table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.info > table td {
+
+  border-bottom: 1px solid black;
+}
+
+.info > table td {
+  padding: 5px 10px 5px 0;
+}
+
+.info td:first-child {
+
+}
+
+.actors {
+  /*width: 160px;*/
+  position: relative;
+  display: block;
+  /*float: right;*/
+  font-size: 14px;
+  /*color: #999;*/
+  /*text-align: right;*/
+}
+
+.actions {
+  float: right;
+  width: 60px;
+}
+
+.actions > button {
+  width: 100%;
+  height: 33%;
+  background-color: inherit;
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.actions > button:first-child {
+  background-image: url('/images/actions/add.png');
+}
+
+.actions > button:nth-child(2) {
+  background-image: url('/images/actions/move.png');
+}
+
+.actions > button:last-child {
+  background-image: url('/images/actions/delete.png');
+}
+
+h3 > span {
+  padding-left: 10px;
+  color: #F60;
+}
+
+
+#actionWindow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.8);
+}
+
+#actionWindow > ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(51, 51, 51, 0.75);
+}
+
+#actionWindow > ul lh,
+#actionWindow > ul li {
+  display: block;
+  border-radius: 2px;
+  color: #CCC;
+}
+
+#actionWindow > ul > lh {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #999;
+  font-size: 18px;
+}
+
+#actionWindow > ul > li {
+  box-sizing: border-box;
+  height: 40px;
+  margin-top: 4px;
+  text-align: center;
+  border: 2px solid #CCC;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+#actionWindow li.containFilm {
+  color: #FF7E27;
+  border-color: #FF7E27;
+}
+
+#actionWindow li:not(.containFilm):hover {
+  color: #FF7E27;
+  border-color:	#FF7E27;
+}
